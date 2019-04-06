@@ -1,4 +1,6 @@
 import vector
+import Game
+import pygame
 class board:
     # variables
     HEIGHT = 10
@@ -11,5 +13,6 @@ class board:
 
         
     # functions
-    def draw_board(self):
-        pass
+    def draw_board(self, color):
+        pygame.draw.rect(Game.screen, color, vector)
+        

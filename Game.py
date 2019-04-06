@@ -9,16 +9,18 @@ import math
 import board, player 
 #
 class Game():
-    MAX_HEIGHT = 512
-    MAX_WIDTH = 512
     def __init__(self):
         pass
+    
+    MAX_HEIGHT = 512
+    MAX_WIDTH = 512
+    screen = pygame.display.set_mode((MAX_HEIGHT, MAX_WIDTH))
+    
     def start(self):
         pass
     def game_loop(self):
         # Initialize Screen
         pygame.init()
-        screen = pygame.display.set_mode((self.MAX_HEIGHT, self.MAX_WIDTH))
         pygame.display.set_caption(" | Pong |")
         # Fill Background
         background = pygame.Surface(screen.get_size())
