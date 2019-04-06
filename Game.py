@@ -28,7 +28,17 @@ def Game():
         screen = pygame.display.set_mode((MAX_HEIGHT,MAX_WIDTH))
         pygame.display.set_caption(" | Pong |")
         # Fill Background
-        background
+        background = pygame.Surface(screen.get_size())
+        background = background.convert()
+        background.fill(255,55,255)
+        # Blit? everything to the screen
+        screen.blit(background, (0,0))
+        pygame.display.flip()
+        # Event loop
+        while 1:
+            for event in pygame.event.get():
+                if event.type == QUIT:
+                    return
 #
 #
 # Superclass Player
@@ -69,6 +79,4 @@ def main():
     pass
 #-------------------------------------------------------------------------------
 if __name__ == "__main__":
-    pygame.init()
-    screen = pygame.display.set_mode((Game.MAX_WIDTH, Game.MAX_HEIGHT))
-    main()
+    Game.game_loop()
