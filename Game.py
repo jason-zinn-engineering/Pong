@@ -6,16 +6,20 @@
 import pygame
 from pygame.locals import *
 import math
-import board, player 
+import board
+import player
 #
+
+index = 0
+
 class Game():
    
-
     def __init__(self):
         self.MAX_HEIGHT = 512
         self.MAX_WIDTH = 512
         self.screen = pygame.display.set_mode((self.MAX_HEIGHT, self.MAX_WIDTH))
-        pass
+        #self.player1 = player("left")
+        #self.player2 = player("right")
     
     def game_loop(self):
         # Initialize Screen
@@ -39,6 +43,7 @@ class Game():
             for event in pygame.event.get():
                 if event.type == QUIT:
                     return
+                
 
 #-------------------------------------------------------------------------------
 if __name__ == "__main__":
