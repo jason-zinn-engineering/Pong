@@ -22,6 +22,13 @@ def Game():
         pass
     def start(self):
         pass
+    def game_loop(self):
+        # Initialize Screen
+        pygame.init()
+        screen = pygame.display.set_mode((MAX_HEIGHT,MAX_WIDTH))
+        pygame.display.set_caption(" | Pong |")
+        # Fill Background
+        background
 #
 #
 # Superclass Player
