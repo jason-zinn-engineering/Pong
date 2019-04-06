@@ -9,21 +9,20 @@ import math
 import board, player 
 #
 class Game():
+   
+
     def __init__(self):
+        self.MAX_HEIGHT = 512
+        self.MAX_WIDTH = 512
+        self.screen = pygame.display.set_mode((self.MAX_HEIGHT, self.MAX_WIDTH))
         pass
     
-    MAX_HEIGHT = 512
-    MAX_WIDTH = 512
-    screen = pygame.display.set_mode((MAX_HEIGHT, MAX_WIDTH))
-    
-    def start(self):
-        pass
     def game_loop(self):
         # Initialize Screen
         pygame.init()
         pygame.display.set_caption(" | Pong |")
         # Fill Background
-        background = pygame.Surface(screen.get_size())
+        background = pygame.Surface(self.screen.get_size())
         background = background.convert()
         background.fill((255,55,255))
         # Display some text
@@ -33,7 +32,7 @@ class Game():
         textpos.centerx = background.get_rect().centerx
         background.blit(text, textpos)
         # Blit? everything to the screen
-        screen.blit(background, (0,0))
+        self.screen.blit(background, (0,0))
         pygame.display.flip()
         # Event loop
         while 1:
