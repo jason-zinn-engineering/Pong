@@ -3,8 +3,13 @@ class board:
     # variables
     HEIGHT = 10
     WIDTH = 2
-    point_position = vector.
+    
     # constructor
-    def __init__():
-        pass
+    def __init__(self, vector):
+        screen = pygame.display.get_surfacE()
+        self.area = screen.get_rect()
+
+        
     # functions
+    def draw_board(self):
+        pass
